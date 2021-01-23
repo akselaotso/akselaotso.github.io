@@ -1,0 +1,326 @@
+$background: #929191;
+$darkerlightcolor: #757575;
+$accent: rgb(231, 227, 227);
+$second: #424141;
+
+body, html {
+    margin: 0;
+    padding: 0; 
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+    background: rgb(27, 27, 27);
+    background: linear-gradient(45deg, rgba(187, 187, 187,0.04) 0%, rgba(187, 187, 187,0.04) 50%,rgba(86, 86, 86,0.04) 50%, rgba(86, 86, 86,0.04) 100%),
+                linear-gradient(135deg, rgba(166, 166, 166,0.04) 0%, rgba(166, 166, 166,0.04) 50%,rgba(92, 92, 92,0.04) 50%, rgba(92, 92, 92,0.04) 100%),
+                linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); 
+    background-size: 142px 142px;
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar { display: none; visibility: hidden; }
+    ::selection { background: rgba($accent, 0.5); /* WebKit/Blink Browsers */ }
+    ::-moz-selection { background: rgba($accent, 0.5); /* Gecko Browsers */ }
+    
+    * {
+        cursor: default;
+        margin: 0;
+        padding: 0;
+        text-decoration: none; 
+        transition: 0.3s;
+        font-family: 'Montserrat', sans-serif; 
+        font-weight: 400;
+        box-sizing: border-box;
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
+
+.logo {
+    z-index: 99;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+
+    $side: 70px;
+
+    svg {
+        height: $side;
+        width: $side;
+
+        * {
+            stroke: $accent;
+            stroke-width: 5px;
+        }
+
+        #outline {
+            stroke-width: 3px;
+        }
+    }
+}
+
+nav {
+    position: fixed;
+    top: -100vh;
+}
+
+#navigation {
+    position: fixed;
+    top: -100vh;
+}
+
+.opening {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+
+    .openinglogo {
+        $side: 500px;
+        position: absolute;
+        background: transparent;
+        top: 50%;
+        right: 75%;
+        transform: translate(50%, -50%);
+    
+        svg {
+            height: $side;
+            width: $side;
+    
+            * {
+                stroke: rgba($second, 1);
+                stroke-width: 2px;
+            }
+    
+            #outline {
+                stroke-width: 1px;
+            }
+        }}
+
+
+    .selection {
+        z-index: 2;
+        width: auto;
+        position: absolute;
+        right: -100vw;
+        line-height: 6vh;
+        margin: 1vh 3vh 0 0;
+        display: flex;
+        background: transparent;
+
+        h2 {
+            padding: 0 2.5vh;
+            font-size: 2vh;
+
+            a {
+                color: $accent;
+                cursor: pointer;
+
+                &:hover {
+                    color: $background;
+                }
+            }
+        }
+    }
+
+
+    .text {
+        position: absolute;
+        top: 45vh;
+        right: 5%;
+        transform: translateY(-50%);
+
+        h1 {
+            font-size: 40px;
+            color: $accent;
+        }
+
+        h3 {
+            font-size: 14px;
+            color: $accent;
+            margin-left: 10px;
+        }
+    }
+
+    .some {
+        position: absolute;
+        right: 2vw;
+        bottom: 1vh;
+        z-index: 91;
+
+        * {
+            color: $accent;
+            padding: 1vh;
+            font-size: 3vh;
+            cursor: pointer;
+
+            &:hover {
+                color: $background;
+            }
+        }
+    }
+
+}
+
+.informationtext {
+    width: 100vw;
+    min-height: 50vh;
+    padding: 30vh 10vw 15vh 10vw;
+    background: $second;
+    color: $accent;
+    font-size: 14px;
+
+    h2 {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    img {
+        position: absolute;
+        width: 200px;
+        right: 10vw;
+        top: 100vh;
+        z-index: 99;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 5vh 0 0 0;
+    
+        div {
+            width: 90%;
+    
+            h3 {
+                margin: 20px 0;
+                font-weight: bold;
+                font-size: 15px;
+            }
+    
+            ul {
+                margin: 10px 0 0 20px;
+            }
+        }
+    }
+}
+
+main {
+    position: relative;
+    padding: 30vh 10vw;
+    position: relative;
+    font-size: 14px;
+
+    div {
+        margin: 0 0 0 5vw;
+    }
+    
+    * {
+        color: $accent;
+        list-style: none;
+
+        a:hover {
+            cursor: pointer;
+            color: $background;
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 8vh 0 2vh 0;
+    }
+
+    ul {
+        margin: 10px 20px;
+
+        li {
+            margin: 5px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80vh;
+    background: $darkerlightcolor;
+    border-top: $second 5px solid;
+
+    * {
+        font-size: 14px;
+        color: $accent;
+        text-align: center;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 4vh;
+            padding: 1vh 0 2vh 0;
+        }
+
+        a {
+            cursor: pointer;
+            
+            &:hover {
+                color: $second;
+            }
+        }
+    }
+
+    .area-2 {
+        p {
+            a {
+                padding: 2vh;
+                font-size: 3vh;
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+
+    .me {
+        position: absolute;
+        left: 18vw;
+        bottom: 30vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20vh;
+
+        img {
+            height: 40vh;
+            opacity: 0.9;
+            z-index: 0;
+            transform: rotateY(180deg);
+        }
+
+        .text2 {
+            padding: 12vh 0 0 5vw;
+
+            h2 {
+                font-size: 5vh;
+                width: 30vw;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 600;
+                color: $accent;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+$accent: #86C232;
+$second: #61892F;
+$darkgrey: #222629;
+$grey: #474B4F;
+$lightgrey: #6B6E70;
+//#86C232, #61892F, #222629, #474B4F, #6B6E70 
+
+@mixin borders($top, $right, $bottom, $left, $color) {
+    border-top: solid $top $color;
+    border-right: solid $right $color;
+    border-bottom: solid $bottom $color;
+    border-left: solid $left $color;
+}
