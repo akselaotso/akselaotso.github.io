@@ -15,7 +15,6 @@ body, html {
                 linear-gradient(135deg, rgba(166, 166, 166,0.04) 0%, rgba(166, 166, 166,0.04) 50%,rgba(92, 92, 92,0.04) 50%, rgba(92, 92, 92,0.04) 100%),
                 linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); 
     background-size: 142px 142px;
-    box-sizing: border-box;
 
     ::-webkit-scrollbar { display: none; visibility: hidden; }
     ::selection { background: rgba($accent, 0.5); /* WebKit/Blink Browsers */ }
@@ -175,16 +174,21 @@ nav {
     padding: 15vh 10vw;
     background: $second;
     color: $accent;
+    position: relative;
 
     h2 {
         font-weight: bold;
         font-size: 40px;
     }
-    img {
+    .imagecontainer {
         position: absolute;
-        width: 200px;
+        width: 15vw;
         right: 10vw;
-        top: 100vh;
+        top: 3vh;
+
+        img {
+             width: 20vh;
+         }
     }
 
     .container {
@@ -212,7 +216,6 @@ nav {
 main {
     position: relative;
     padding: 30vh 10vw;
-    position: relative;
 
     div {
         margin: 0 0 0 5vw;
@@ -255,8 +258,9 @@ footer {
     background: $darkerlightcolor;
     border-top: $second 5px solid;
 
+    $fontsize: 17px;
     * {
-        font-size: 2vh;
+        font-size: ($fontsize);
         color: $accent;
         text-align: center;
     }
@@ -285,39 +289,98 @@ footer {
         p {
             a {
                 padding: 2vh;
-                font-size: 3vh;
+                font-size: ($fontsize * 1.5);
             }
         }
     }
 }
 
-@media (orientation: portrait) {
-
-    .me {
-        position: absolute;
-        left: 18vw;
-        bottom: 30vh;
-        display: flex;
-        flex-direction: column;
-        padding-top: 20vh;
-
-        img {
-            height: 40vh;
-            opacity: 0.9;
-            z-index: 0;
-            transform: rotateY(180deg);
-        }
-
-        .text2 {
-            padding: 12vh 0 0 5vw;
-
-            h2 {
-                font-size: 5vh;
-                width: 30vw;
-                font-family: 'Oswald', sans-serif;
-                font-weight: 600;
-                color: $accent;
+@media all and (max-width: 950px) {
+    .informationtext {
+        .imagecontainer {
+            img {
+                width: 0;
             }
         }
+
+        .container {
+            flex-direction: column;
+
+            div {
+                width: 80%;
+                padding-top: 50px;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 800px) {
+    footer {
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    .opening {
+
+        .text {
+            h1 {
+                font-size: 7vh;
+            }
+            h3 {
+                font-size: 2vh;
+            }
+        }
+
+        .logo {
+            svg {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 500px) {
+    .logo {
+        svg {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .opening {
+        .selection {
+            h2 {
+                font-size: 1.7vh;
+            }
+        }
+    }
+    .informationtext {
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
+
+.anim {
+    opacity: 0;
+}
+
+@keyframes movestuff {
+    from {
+        margin-top: 0px;
+    }
+    to {
+        margin-top: -2vh;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

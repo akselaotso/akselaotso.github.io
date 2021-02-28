@@ -22,9 +22,7 @@
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     
         <!-- Own -->
-        <link rel="stylesheet" type="text/css" href="effect/effect.css?v=2"> <!-- Scroll effect css -->
-        <link rel="stylesheet" href="css/mobile.css?v=2" media="(orientation: portrait)"> <!-- Mobile css -->
-        <link rel="stylesheet" type="text/css" media="(orientation: landscape)" href="css/main.css?v=2"> <!-- PC css -->
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=2"> <!-- PC css -->
     
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900|Oswald:300,400,700|Raleway:300,400,900&display=swap" rel="stylesheet"><!-- Monserrat, Oswald, Raleway-->
@@ -33,33 +31,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awesome -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Material Icons -->
     
-        <!-- ScrollSpeed -->
-        <script>
-            $.fn.moveIt = function(){ var $window = $(window); 
-                var instances = []; $(this).each(function(){ 
-                    instances.push(new moveItItem($(this)));
-                }); 
-                window.addEventListener('scroll', function(){
-                    var scrollTop = $window.scrollTop(); 
-                    instances.forEach(function(inst){ 
-                        inst.update(scrollTop); 
-                    }); 
-                }, 
-                {
-                    passive: true
-                }); 
-            }
-            var moveItItem = function(el){
-                this.el = $(el); 
-                this.speed = parseInt(this.el.attr('data-scroll-speed')); 
-            };
-            moveItItem.prototype.update = function(scrollTop){ 
-                this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)'); 
-            };
-            $(function(){
-                $('[data-scroll-speed]').moveIt(); 
-            });
-        </script>
+
     </head>
 <body>
     <div id="navigation" onclick="closeNav()">
@@ -110,7 +82,9 @@
 
     <div class="informationtext">
         <h2>Me, essentially</h2>
-        <img src="./images/school_photo.jpeg" alt="" data-scroll-speed="9">
+        <div class="imagecontainer anim" data-type="movestuff" style="opacity: 1;">
+            <img src="./images/school_photo.jpeg" alt="" class="anim" data-type="movestuff" style="opacity: 1;">
+        </div>
         <div class="container">
             <div class="Hobbies">
                 <h3>In general</h3>

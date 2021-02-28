@@ -8,8 +8,6 @@ body, html {
   background: #1b1b1b;
   background: linear-gradient(45deg, rgba(187, 187, 187, 0.04) 0%, rgba(187, 187, 187, 0.04) 50%, rgba(86, 86, 86, 0.04) 50%, rgba(86, 86, 86, 0.04) 100%), linear-gradient(135deg, rgba(166, 166, 166, 0.04) 0%, rgba(166, 166, 166, 0.04) 50%, rgba(92, 92, 92, 0.04) 50%, rgba(92, 92, 92, 0.04) 100%), linear-gradient(90deg, #141414, #141414);
   background-size: 142px 142px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 body ::-webkit-scrollbar, html ::-webkit-scrollbar {
@@ -191,6 +189,7 @@ nav {
   padding: 15vh 10vw;
   background: #424141;
   color: #e7e3e3;
+  position: relative;
 }
 
 .informationtext h2 {
@@ -198,11 +197,15 @@ nav {
   font-size: 40px;
 }
 
-.informationtext img {
+.informationtext .imagecontainer {
   position: absolute;
-  width: 200px;
+  width: 15vw;
   right: 10vw;
-  top: 100vh;
+  top: 3vh;
+}
+
+.informationtext .imagecontainer img {
+  width: 20vh;
 }
 
 .informationtext .container {
@@ -236,7 +239,6 @@ nav {
 main {
   position: relative;
   padding: 30vh 10vw;
-  position: relative;
 }
 
 main div {
@@ -288,7 +290,7 @@ footer {
 }
 
 footer * {
-  font-size: 2vh;
+  font-size: 17px;
   color: #e7e3e3;
   text-align: center;
 }
@@ -324,39 +326,95 @@ footer div a:hover {
 
 footer .area-2 p a {
   padding: 2vh;
-  font-size: 3vh;
+  font-size: 25.5px;
 }
 
-@media (orientation: portrait) {
-  .me {
-    position: absolute;
-    left: 18vw;
-    bottom: 30vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+@media all and (max-width: 950px) {
+  .informationtext .imagecontainer img {
+    width: 0;
+  }
+  .informationtext .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 20vh;
   }
-  .me img {
-    height: 40vh;
-    opacity: 0.9;
-    z-index: 0;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+  .informationtext .container div {
+    width: 80%;
+    padding-top: 50px;
   }
-  .me .text2 {
-    padding: 12vh 0 0 5vw;
+}
+
+@media all and (max-width: 800px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80vh;
   }
-  .me .text2 h2 {
-    font-size: 5vh;
-    width: 30vw;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    color: #e7e3e3;
+  .opening .text h1 {
+    font-size: 7vh;
+  }
+  .opening .text h3 {
+    font-size: 2vh;
+  }
+  .opening .logo svg {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .logo svg {
+    height: 50px;
+    width: 50px;
+  }
+  .opening .selection h2 {
+    font-size: 1.7vh;
+  }
+  .informationtext h2 {
+    font-size: 30px;
+  }
+}
+
+.anim {
+  opacity: 0;
+}
+
+@-webkit-keyframes movestuff {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -2vh;
+  }
+}
+
+@keyframes movestuff {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -2vh;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
