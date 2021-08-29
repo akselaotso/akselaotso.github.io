@@ -1,6 +1,6 @@
 <?php
   $EmailFrom = "Yoursite";
-  $EmailTo = "aksela@aksela.net";
+  $EmailTo = "aksela@gmail.com";
   $Subject = "From your website";
   $Name = Trim(stripslashes($_POST['Name'])); 
   $Tel = Trim(stripslashes($_POST['City'])); 
