@@ -22,13 +22,8 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 <body>
-    <div id="navigation" onclick="closeNav()">
-        <h2><a href="">HOME</a></h2>
-        <h2><a href="#info">INFO</a></h2>
-        <h2><a href="#footer">CONTACTS</a></h2>
-    </div>
 
-    <a class="logo" href="index.htm">
+    <a class="logo" href="index.htm#">
         <svg width="192" height="180" viewBox="0 0 192 180" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="90" cy="90" r="89.5" stroke="black" id="outline"/>
             <circle cx="65.5" cy="106.5" r="59.5" stroke="black" stroke-width="2"/>
@@ -36,6 +31,15 @@
             <path d="M155 87L9 87" stroke="black" stroke-width="2"/>
         </svg>
     </a>
+    
+    <div class="selection">
+        <h2><a href="#info">INFO</a></h2>
+        <h2><a href="#footer">CONTACT</a></h2>
+    </div>
+    
+    <div class="some" id="some">
+        <a target="_blank" href="http://www.linkedin.com/in/otsoaksela">in</a>
+    </div>
 
     <div class="opening noselect" id="home">
         <div class="openinglogo">
@@ -47,96 +51,44 @@
             </svg>
         </div>
 
-        <div class="selection">
-            <h2><a href="#info">INFO</a></h2>
-            <h2><a href="#portfolio">PORTFOLIO</a></h2>
-            <h2><a href="#footer">CONTACTS</a></h2>
-        </div>
-
-        <nav onclick="openNav()">
-            <i id="menu-icon" class="material-icons md-36">menu</i>
-        </nav>
-
         <div class="text">
             <h1 class="anim" data-type="fade-in" data-duration="0.8s">OTSO AKSELA</h1>
             <h3 class="anim" data-type="fade-in" data-duration="0.8s" data-delay="0.8s">19 year old student and entrepreneur.</h3>
         </div>
-
-        <div class="some" id="some">
-            <a target="_blank" href="http://www.linkedin.com/in/otsoaksela" class="fa fa-linkedin"></a><a target="_blank" href="https://twitter.com/akselaotso" class="fa fa-twitter"></a>
-        </div>
-
     </div>
 
-    <div class="informationtext" id="info">
+    <main id="info">
+        <img src="./images/school_photo.jpeg" alt="" loading="lazy" class="image__me">
         <h2>Me, essentially</h2>
-        <div class="imagecontainer anim" data-type="movestuff" style="opacity: 1;">
-            <img src="./images/school_photo.jpeg" alt="" class="anim" data-type="movestuff" style="opacity: 1;">
+        <br>
+        <p>I enjoy programming, running and powerlifting.</p>
+        <div class="Profession">
+            <div class="image__bearint">
+                <a href="https://www.bearint.fi" target="_blank"><img loading="lazy" src="./images/logo_default.png" alt=""></a>
+            </div>
+            <h3>Professionally</h3>
+            <p>I started my own webdevelopment company Bearint Oy in June 2021. To find out more, visit
+                <a href="https://www.bearint.fi" class="bearintlink" target="_blank">www.bearint.fi</a>, the company's webpage.
+                <br><br> Right before starting my military service I worked at a HSY garbage disposal station, to which I returned before heading to uni.
+                I've worked as a selfemployed gardener, preceded by a summerjob at a gardening store.</p>
         </div>
-        <div class="container">
-            <div class="Hobbies">
-                <h3>In general</h3>
-                <p>I'm Otso Aksela, a 19 year old student who enjoys programming, running and powerlifting.</p>
+        <div class="Education">
+            <div class="image__linkedin">
+                <a class="" target="_blank" href="http://www.linkedin.com/in/otsoaksela">in</a>
             </div>
-            <div class="Profession">
-                <h3>Professional life</h3>
-                <p>I started my own webdevelopment company Bearint Oy in June 2021. To find out more, visit
-                  <a href="https://www.bearint.fi" class="bearintlink" target="_blank">www.bearint.fi</a>, the company's webpage.
-                  <br><br> Right before starting my military service I worked at a HSY garbage disposal station.
-                  Previously I've worked as a selfemployed gardener for two years, preceded by a summerjob at a gardening store.</p>
-            </div>
-            <div class="Education">
-                <h3>Education</h3>
-                <p>After my military service I'll be starting my studies in automation and information technology at Aalto University in 2022,
-                  having graduated with an International Baccalaureate diploma from Etelä-Tapiola high school.</p>
-            </div>
-        </div>
-    </div>
-
-    <main>
-        <h2 id="portfolio">Portfolio</h2>
-        <div>
-            <h3>Essays and Investigations</h3>
-            <p>Here are some essays and investigations I've written or conducted. I am not an expert in these fields.</p>
-            <ul>
-                <li><a target="_blank" href="./Documents/Otso_Aksela-Modelling_population_sizes_and_changes.pdf">
-                    Otso Aksela - Modelling population sizes and changes.</a></li>
-                <li><a target="_blank" href="./Documents/Otso_Aksela-Upward_Force_from_Air_Resistance_in_Paper_Helicopters.pdf">
-                    Otso Aksela - Upward force from air resistance in paper helicopters.</a></li>
-                <li><a target="_blank" href="./Documents/Otso_Aksela-President_Truman_and_crossing_the_38th_parallel_in_the_Korean_War.pdf">
-                    Otso Aksela - President Truman and crossing the 38th parallel in the Korean War.</a></li>
-                <li><a target="_blank" href="./Documents/Otso_Aksela-Were_there_any_victors_in_the_war_of_1812.pdf">
-                    Otso Aksela - Were there any victors in the war of 1812?</a></li>
-                <li><a target="_blank" href="./Documents/Otso_Aksela-To_what_extent_was_Apple_aquiring_Shazam_a_profitable_investment.pdf">
-                    Otso Aksela - To what extent was Apple aquiring Shazam a profitable investment?</a></li>
-            </ul>
-
-            <h3>Websites</h3>
-            <p>Here are some websites I've made.</p>
-            <ul>
-                <li><a target="_blank" href="https://www.bearint.fi">Bearint Oy - my webdevelopment company</a></li>
-                <li><a href="index.htm#portfolio">Personal site - the one you're on</a></li>
-                <li><a target="_blank" href="./delta-attack/index.htm">Delta-Attack Blues Duo</a></li>
-                <li><a target="_blank" href="./Akso/index.htm">Akso Gardening - no longer active, kept for the portfolio.</a></li>
-            </ul>
+            <h3>And My Education</h3>
+            <p>I'm starting my studies in information technology at Aalto University in 2022,
+                having graduated with an International Baccalaureate diploma from Etelä-Tapiola high school.</p>
         </div>
     </main>
 
     <footer id="footer">
         <div class="area-1">
             <h3>Contact me:</h3>
-            <p>Email:</p>
-            <a href="mailto:akselaotso@gmail.com">akselaotso@gmail.com</a>
-        </div>
-        <div class="area-2">
-            <h3>Find me online:</h3>
-            <p><a target="_blank" href="http://www.linkedin.com/in/otsoaksela" class="fa fa-linkedin"></a><a target="_blank" href="https://twitter.com/akselaotso" class="fa fa-twitter"></a></p>
+            <a href="mailto:otso.aksela@bearint.fi">otso.aksela@bearint.fi</a>
         </div>
     </footer>
 
     <script type="text/javascript" src="effect/effect.js"></script>
-
-    <!-- Effects -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awesome -->
 </body>
 </html>
