@@ -28,7 +28,7 @@ main .Profession{
 
 @media (min-width:600px) {
     main .Profession{
-        margin-top:30vh
+        margin-top:18vh
     }
 }
 
@@ -38,7 +38,7 @@ main .Education {
 
 @media (min-width:400px) {
     main .Education{
-        margin-top:25vh
+        margin-top:18vh
     }
 }
 
