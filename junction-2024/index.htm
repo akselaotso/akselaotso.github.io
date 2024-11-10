@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Interaction</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <div class="form-container">
+            <div class="text">
+                <h3>Instructions</h3>
+                <ul>
+                    <li>
+                        <b>
+                            Click a person to select them. Then you can change their attributes on the right-hand side. 
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            Delegating
+                        </b>
+                    </li>
+                </ul>
+            </div>
+
+            <form id="propositionForm">
+                <h3>Proposition</h3>
+                <label for="lawDefence">Defence (-1 to 1):</label>
+                <input type="number" class="numberInput" id="lawDefence" min="-1" max="1" step="0.01" value="0">
+
+                <label for="lawHealth">Health (-1 to 1):</label>
+                <input type="number" class="numberInput" id="lawHealth" min="-1" max="1" step="0.01" value="0">
+
+                <label for="lawEducation">Education (-1 to 1):</label>
+                <input type="number" class="numberInput" id="lawEducation" min="-1" max="1" step="0.01" value="0">
+                
+                <label for="lawImportance">Importance (0 to 1):</label>
+                <input type="number" class="numberInput" id="lawImportance" min="0" max="1" step="0.01" value="0">    
+
+                <button type="submit" class="formbutton">Save</button>
+            </form>
+            
+            <button id="repset" class="formbutton">Representative democracy setup</button>
+
+            
+            <button id="runVote" class="formbutton">run optimal</button>
+
+
+            <button id="runRawVote">run raw</button>
+        </div>
+
+        <div class="mid">
+            <svg width="700" height="687.593" viewBox="0 0 700 687.593" fill="none" xmlns="http://www.w3.org/2000/svg">
+                
+                
+                <path id="0_1" d="M350.044 344.118V137.648" stroke="black" stroke-width="2"></path>
+                <path id="0_2" d="M350.044 344.118L454.770 165.261" stroke="black" stroke-width="2"></path>
+                <path id="0_3" d="M350.044 344.118L532.060 240.729" stroke="black" stroke-width="2"></path>
+                <path id="0_4" d="M350.044 344.118H564.624" stroke="black" stroke-width="2"></path>
+                <path id="0_5" d="M350.044 344.118L532.060 447.507" stroke="black" stroke-width="2"></path>
+                <path id="0_6" d="M350.044 344.118L454.770 522.924" stroke="black" stroke-width="2"></path>
+                <path id="0_7" d="M350.044 344.118V550.383" stroke="black" stroke-width="2"></path>
+                <path id="0_8" d="M350.044 344.118L245.043 522.924" stroke="black" stroke-width="2"></path>
+                <path id="0_9" d="M350.044 344.118L168.277 447.507" stroke="black" stroke-width="2"></path>
+                <path id="0_10" d="M350.044 344.118H140.037" stroke="black" stroke-width="2"></path>
+                <path id="0_11" d="M350.044 344.118L168.277 240.729" stroke="black" stroke-width="2"></path>
+                <path id="0_12" d="M350.044 344.118L245.043 165.261" stroke="black" stroke-width="2"></path>
+                <path id="1_2" d="M350.044 137.648L454.770 165.260" stroke="black" stroke-width="2"></path>
+                <path id="1_3" d="M350.044 137.648L532.060 240.729" stroke="black" stroke-width="2"></path>
+                <path id="1_4" d="M350.044 137.648L564.624 344.118" stroke="black" stroke-width="2"></path>
+                <path id="1_5" d="M350.044 137.648L532.060 447.507" stroke="black" stroke-width="2"></path>
+                <path id="1_6" d="M350.044 137.648L454.770 522.924" stroke="black" stroke-width="2"></path>
+                <path id="1_7" d="M350.044 137.648C504.311 36.990 538.577 627.624 350.044 550.383" stroke="black" stroke-width="2"></path>
+                <path id="1_8" d="M350.044 137.648L245.043 522.924" stroke="black" stroke-width="2"></path>
+                <path id="1_9" d="M350.044 137.648L168.277 447.507" stroke="black" stroke-width="2"></path>
+                <path id="1_10" d="M350.044 137.648L140.037 344.118" stroke="black" stroke-width="2"></path>
+                <path id="1_11" d="M350.044 137.648L168.277 240.729" stroke="black" stroke-width="2"></path>
+                <path id="1_12" d="M350.044 137.648L245.043 165.260" stroke="black" stroke-width="2"></path>
+                <path id="2_3" d="M454.770 165.261L532.060 240.729" stroke="black" stroke-width="2"></path>
+                <path id="2_4" d="M454.770 165.261L564.624 344.118" stroke="black" stroke-width="2"></path>
+                <path id="2_5" d="M454.770 165.261L532.060 447.507" stroke="black" stroke-width="2"></path>
+                <path id="2_6" d="M454.770 165.261V522.924" stroke="black" stroke-width="2"></path>
+                <path id="2_7" d="M454.770 165.261L350.044 550.383" stroke="black" stroke-width="2"></path>
+                <path id="2_8" d="M454.770 165.261C666.927 161.130 313.607 685.117 245.043 522.924" stroke="black" stroke-width="2"></path>
+                <path id="2_9" d="M454.770 165.261L168.277 447.507" stroke="black" stroke-width="2"></path>
+                <path id="2_10" d="M454.770 165.261L140.037 344.118" stroke="black" stroke-width="2"></path>
+                <path id="2_11" d="M454.770 165.261L168.277 240.729" stroke="black" stroke-width="2"></path>
+                <path id="2_12" d="M454.770 165.261H245.043" stroke="black" stroke-width="2"></path>
+                <path id="3_4" d="M532.060 240.729L564.624 344.118" stroke="black" stroke-width="2"></path>
+                <path id="3_5" d="M532.060 240.729V447.507" stroke="black" stroke-width="2"></path>
+                <path id="3_6" d="M532.060 240.729L454.770 522.924" stroke="black" stroke-width="2"></path>
+                <path id="3_7" d="M532.060 240.729L350.044 550.383" stroke="black" stroke-width="2"></path>
+                <path id="3_8" d="M532.060 240.729L245.043 522.924" stroke="black" stroke-width="2"></path>
+                <path id="3_9" d="M532.060 240.729C681.848 364.922 201.995 611.933 168.277 447.507" stroke="black" stroke-width="2"></path>
+                <path id="3_10" d="M532.060 240.729L140.037 344.118" stroke="black" stroke-width="2"></path>
+                <path id="3_11" d="M532.060 240.729H168.277" stroke="black" stroke-width="2"></path>
+                <path id="3_12" d="M532.060 240.729L245.043 165.261" stroke="black" stroke-width="2"></path>
+                <path id="4_5" d="M564.624 344.118L532.060 447.507" stroke="black" stroke-width="2"></path>
+                <path id="4_6" d="M564.624 344.118L454.770 522.924" stroke="black" stroke-width="2"></path>
+                <path id="4_7" d="M564.624 344.118L350.044 550.383" stroke="black" stroke-width="2"></path>
+                <path id="4_8" d="M564.624 344.118L245.043 522.924" stroke="black" stroke-width="2"></path>
+                <path id="4_9" d="M564.624 344.118L168.277 447.507" stroke="black" stroke-width="2"></path>
+                <path id="4_11" d="M564.624 344.118L168.277 240.729" stroke="black" stroke-width="2"></path>
+                <path id="4_12" d="M564.624 344.118L245.043 165.261" stroke="black" stroke-width="2"></path>
+                <path id="5_6" d="M532.060 447.507L454.770 522.924" stroke="black" stroke-width="2"></path>
+                <path id="5_7" d="M532.060 447.507L350.044 550.383" stroke="black" stroke-width="2"></path>
+                <path id="5_8" d="M532.060 447.507L245.043 522.924" stroke="black" stroke-width="2"></path>
+                <path id="5_9" d="M532.060 447.507H168.277" stroke="black" stroke-width="2"></path>
+                <path id="5_10" d="M532.060 447.507L140.037 344.118" stroke="black" stroke-width="2"></path>
+                <path id="5_11" d="M532.060 447.507C482.352 630.361 15.986 349.453 168.277 240.729" stroke="black" stroke-width="2"></path>
+                <path id="5_12" d="M532.060 447.507L245.043 165.261" stroke="black" stroke-width="2"></path>
+                <path id="6_7" d="M454.770 522.924L350.044 550.383" stroke="black" stroke-width="2"></path>
+                <path id="6_8" d="M454.770 522.924H245.043" stroke="black" stroke-width="2"></path>
+                <path id="6_9" d="M454.770 522.924L168.277 447.507" stroke="black" stroke-width="2"></path>
+                <path id="6_10" d="M454.770 522.924L140.037 344.118" stroke="black" stroke-width="2"></path>
+                <path id="6_11" d="M454.770 522.924L168.277 240.729" stroke="black" stroke-width="2"></path>
+                <path id="6_12" d="M454.770 522.924C659.793 492.006 345.948 10.712 245.043 165.261" stroke="black" stroke-width="2"></path>
+                <path id="7_8" d="M350.044 550.383L245.043 522.924" stroke="black" stroke-width="2"></path>
+                <path id="7_9" d="M350.044 550.383L168.277 447.507" stroke="black" stroke-width="2"></path>
+                <path id="7_10" d="M350.044 550.383L140.037 344.118" stroke="black" stroke-width="2"></path>
+                <path id="7_11" d="M350.044 550.383L168.277 240.729" stroke="black" stroke-width="2"></path>
+                <path id="7_12" d="M350.044 550.383L245.043 165.261" stroke="black" stroke-width="2"></path>
+                <path id="8_9" d="M245.043 522.924L168.277 447.507" stroke="black" stroke-width="2"></path>
+                <path id="8_10" d="M245.043 522.924L140.037 344.118" stroke="black" stroke-width="2"></path>
+                <path id="8_11" d="M245.043 522.924L168.277 240.729" stroke="black" stroke-width="2"></path>
+                <path id="8_12" d="M245.043 522.924V165.261" stroke="black" stroke-width="2"></path>
+                <path id="9_10" d="M168.277 447.507L140.037 344.118" stroke="black" stroke-width="2"></path>
+                <path id="9_11" d="M168.277 447.507V240.729" stroke="black" stroke-width="2"></path>
+                <path id="9_12" d="M168.277 447.507L245.043 165.261" stroke="black" stroke-width="2"></path>
+                <path id="10_11" d="M140.037 344.118L168.277 240.729" stroke="black" stroke-width="2"></path>
+                <path id="10_12" d="M140.037 344.118L245.043 165.261" stroke="black" stroke-width="2"></path>
+                <path id="4_10" d="M141.337 343.717C39.453 483.796 558.922 482.503 560.637 343.717" stroke="black" stroke-width="0.543"></path>
+                <path id="11_12" d="M168.277 240.729L245.043 165.261" stroke="black" stroke-width="2"></path>
+        
+                <g id="0">
+                    <rect x="322.220" y="306.204" width="56.213" height="77.042" rx="1.358" fill="#D9D9D9" stroke="#C8102E" stroke-width="3.262"></rect>
+                    <rect x="328.076" y="316.617" width="44.079" height="2.471" rx="0.815" fill="#4B4B4B"></rect>
+                    <rect x="328.076" y="323.254" width="44.079" height="2.471" rx="0.815" fill="#4B4B4B"></rect>
+                    <rect x="328.076" y="329.891" width="44.079" height="2.471" rx="0.815" fill="#4B4B4B"></rect>
+                    <rect x="328.076" y="336.528" width="44.079" height="2.471" rx="0.815" fill="#4B4B4B"></rect>
+                    <rect x="328.076" y="343.165" width="44.079" height="2.471" rx="0.815" fill="#4B4B4B"></rect>
+                    <rect x="328.076" y="349.803" width="44.079" height="2.471" rx="0.815" fill="#4B4B4B"></rect>
+                    <rect x="328.076" y="356.440" width="44.079" height="2.471" rx="0.815" fill="#4B4B4B"></rect>
+                    <path d="M338.154 367.529C338.154 369.713 336.935 371.531 335.160 371.531C333.384 371.531 332.165 369.713 332.165 367.529C332.165 365.345 333.384 363.528 335.160 363.528C336.935 363.528 338.154 365.345 338.154 367.529Z" stroke="#4B4B4B" stroke-width="1.631"></path>
+                    <path d="M332.776 377.834V371.748C332.776 371.612 332.882 371.506 333.017 371.506H337.303C337.438 371.506 337.544 371.612 337.544 371.748V377.834C337.544 378.129 337.436 378.193 337.303 378.059L335.294 376.916C335.190 376.847 335.046 376.844 334.940 376.908L332.943 378.073C332.806 378.160 332.776 378.085 332.776 377.834Z" stroke="#4B4B4B" stroke-width="1.631"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M372.072 367.026C372.072 369.210 370.853 371.028 369.078 371.028C367.303 371.028 366.084 369.210 366.084 367.026C366.084 364.842 367.303 363.024 369.078 363.024C370.853 363.024 372.072 364.842 372.072 367.026ZM368.964 366.710C369.052 366.710 369.125 366.783 369.125 366.871V367.180C369.125 367.268 369.052 367.341 368.964 367.341H368.823V367.482C368.823 367.570 368.750 367.643 368.662 367.643H368.659C368.571 367.643 368.498 367.570 368.498 367.482V367.341H368.357C368.269 367.341 368.196 367.268 368.196 367.180V366.871C368.196 366.783 368.269 366.710 368.357 366.710H368.498V366.569C368.498 366.481 368.571 366.408 368.659 366.408H368.662C368.750 366.408 368.823 366.481 368.823 366.569V366.710H368.964Z" fill="#C8102E"></path>
+                </g>
+    
+                <ellipse cx="454.770" cy="131.114" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="2" x="439.163" y="146.469" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="351.089" cy="102.751" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="1" x="335.108" y="118.119" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="170.204" cy="202.051" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="11" x="154.161" y="217.406" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="536.224" cy="213.240" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="3" x="520.617" y="228.595" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="564.624" cy="309.122" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="4" x="549.017" y="324.477" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="532.060" cy="409.647" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="5" x="516.453" y="424.999" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="450.721" cy="478.134" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="6" x="435.113" y="493.488" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="345.810" cy="500.733" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="7" x="330.203" y="516.087" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="241.131" cy="483.355" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="8" x="225.524" y="498.709" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="168.277" cy="408.035" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="9" x="152.670" y="423.388" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="142.117" cy="307.517" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="10" x="126.510" y="322.870" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+                
+                <ellipse cx="245.043" cy="128.400" rx="11.948" ry="11.951" fill="#002F6C"></ellipse>
+                <rect id="12" x="229.436" y="143.754" width="31.949" height="42.808" rx="1.901" fill="#002F6C"></rect>
+            </svg>
+
+            <div id="array-container"></div>
+        </div>
+
+        <div class="form-container" id="interestForm">
+            <form id="floatForm">
+                <label for="defenceOpinion">Defence Opinion (-1 to 1):</label>
+                <input type="number" class="numberInput" id="defenceOpinion" min="-1" max="1" step="0.01" value="0">
+                
+                <label for="defenceImportance">Defence Importance (0 to 1):</label>
+                <input type="number" class="numberInput" id="defenceImportance" min="0" max="1" step="0.01" value="0">
+        
+                <label for="educationOpinion"><br>Education Opinion (-1 to 1):</label>
+                <input type="number" class="numberInput" id="educationOpinion" min="-1" max="1" step="0.01" value="0">
+                
+                <label for="educationImportance">Education Importance (0 to 1):</label>
+                <input type="number" class="numberInput" id="educationImportance" min="0" max="1" step="0.01" value="0">
+        
+                <label for="healthOpinion"><br>Health Opinion (-1 to 1):</label>
+                <input type="number" class="numberInput" id="healthOpinion" min="-1" max="1" step="0.01" value="0">
+                
+                <label for="healthImportance">Health Importance (0 to 1):</label>
+                <input type="number" class="numberInput" id="healthImportance" min="0" max="1" step="0.01" value="0">
+        
+                <label for="politicalEngagement"><br>Political Engagement (0 to 1):</label>
+                <input type="number" class="numberInput" id="politicalEngagement" min="0" max="1" step="0.01" value="0">
+                
+                <label for="importanceThreshold">Importance Threshold (0 to 1):</label>
+                <input type="number" class="numberInput" id="importanceThreshold" min="0" max="1" step="0.01" value="0">
+        
+                <button class="formbutton" type="button" id="delegateEducation">Delegate Education</button>
+                <button class="formbutton" type="button" id="delegateDefence">Delegate Defence</button>
+                <button class="formbutton" type="button" id="delegateHealth">Delegate Health</button>
+    
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </main>
+
+<script type="Module" src="./js/app.js"></script>
+
+</body></html>
+
