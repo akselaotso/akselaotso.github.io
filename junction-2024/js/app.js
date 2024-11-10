@@ -104,8 +104,6 @@ document.getElementById('propositionForm').addEventListener('submit', function(e
   proposition.setEducation(parseFloat(document.getElementById('lawEducation').value));
   proposition.setHealth(parseFloat(document.getElementById('lawHealth').value));
   proposition.setImportance(parseFloat(document.getElementById('lawImportance').value));
-
-  console.log(proposition);
 });
 
 
@@ -126,8 +124,6 @@ document.getElementById('floatForm').addEventListener('submit', function(event) 
   
   currentPerson.setPoliticalEngagement(parseFloat(document.getElementById('politicalEngagement').value));
   currentPerson.setImportanceThreshold(parseFloat(document.getElementById('importanceThreshold').value));
-
-  console.log(currentPerson);
 });
 
 
@@ -148,17 +144,14 @@ elements.forEach(element => {
           case 'delegateEducation':
             currentPerson.setEducationDelegate(currentPerson.id);
             drawLines(simulation);
-            console.log('Delegated education from', currentPerson, 'to', targetPerson);
             break;
           case 'delegateDefence':
             currentPerson.setDefenceDelegate(currentPerson.id);
             drawLines(simulation);
-            console.log('Delegated defence from', currentPerson, 'to', targetPerson);
             break;
           case 'delegateHealth':
             currentPerson.setHealthDelegate(currentPerson.id);
             drawLines(simulation);
-            console.log('Delegated health from', currentPerson, 'to', targetPerson);
             break;
         }
       } else {
@@ -167,21 +160,18 @@ elements.forEach(element => {
             if (targetPerson.educationDelegate != currentPerson.id) {
               currentPerson.setEducationDelegate(element);
               drawLines(simulation);
-              console.log('Delegated education from', currentPerson, 'to', targetPerson);
             }
             break;
           case 'delegateDefence':
             if (targetPerson.defenceDelegate != currentPerson.id) {
               currentPerson.setDefenceDelegate(element);
               drawLines(simulation);
-              console.log('Delegated defence from', currentPerson, 'to', targetPerson);
             }
             break;
           case 'delegateHealth':
             if (targetPerson.healthDelegate != currentPerson.id) {
               currentPerson.setHealthDelegate(element);
               drawLines(simulation);
-              console.log('Delegated health from', currentPerson, 'to', targetPerson);
             }
             break;
         }
@@ -220,5 +210,4 @@ elements.forEach(element => {
 function delegateHandler(event) {
   isDelegating = true;
   delegateAction = event.target.id;
-  console.log('Select a person to delegate', delegateAction, 'to');
 }

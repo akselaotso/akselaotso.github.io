@@ -54,7 +54,6 @@ export default class Simulation {
         let averageDissatisfaction = totalDissatisfaction / this.numberOfPeople;
 
         this.results.push(averageDissatisfaction);
-        console.log(this.results);
     }
 
 
@@ -88,9 +87,7 @@ export default class Simulation {
         let chosenDelegateDEF = null;
         let category = this.proposition.category;
 
-        console.log(this.delegates)
         this.delegates.forEach(delegate => {
-                console.log("s");
             let defenceDivergence = person.defenceImportance * (delegate.defenceOpinion - person.defenceOpinion) ** 2;
             let educationDivergence = person.educationImportance * (delegate.educationOpinion - person.educationOpinion) ** 2;
             let healthDivergence = person.healthImportance * (delegate.healthOpinion - person.healthOpinion) ** 2;
@@ -199,9 +196,7 @@ export default class Simulation {
             // } else {
                 
             // }
-            console.log(person.isDelegate());
             if (!(person.isDelegate())) {
-                console.log("s");
                 this.delegateVote(person);
             }
         }
