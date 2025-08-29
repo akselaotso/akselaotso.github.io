@@ -168,7 +168,6 @@ body a:hover, html a:hover {
 main { 
     margin: auto;
     min-height: 50vh;
-    padding-top: 15vh;
     position: relative;
     width: clamp(300px,90vw,800px)
 }
@@ -199,24 +198,8 @@ main h3{
     margin:20px 0
 }
 
-main .Profession{
-    margin-top:50vh
-}
-
-@media (min-width:600px) {
-    main .Profession{
-        margin-top:18vh
-    }
-}
-
-main .Education {
-    margin-top:40vh;
-}
-
-@media (min-width:400px) {
-    main .Education{
-        margin-top:18vh
-    }
+main div {
+    margin-top:5vh;
 }
 
 main .image__me {
@@ -229,34 +212,6 @@ main .image__me {
     position:relative;
     width:250px
 }
-
-@media (max-width:600px) {
-    main .image__me {
-        left:50%;
-        position:absolute;
-        top:30vh;
-        transform:translateX(-50%)
-    }
-}
-
-/* main .image__linkedin{background-color:var(--color__text);border-radius:100%;display:none;float:none;height:100px;justify-content:center;margin:10px;width:100px}main .image__linkedin a{color:var(--color__background);font-size:70px;font-weight:700;line-height:100px;text-decoration:none}@media (min-width:900px){main .image__linkedin{display:flex}} */
-
-/* main .image__bearint {
-    float:none;
-    margin: 0;
-}
-
-main .image__bearint, main .image__bearint img {
-    height:150px;
-    width:150px
-}
-
-@media (max-width:400px){
-    main .image__bearint{
-        position: absolute;
-        top:50vh
-    }
-} */
 
 footer {
     display: flex;
